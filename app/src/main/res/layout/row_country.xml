@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/rvCountryNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="@font/akaya_telivigala"
+        android:textSize="18sp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/recipe"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/rvCountryImage"
+        app:layout_constraintStart_toStartOf="@+id/rvCountryImage"
+        app:layout_constraintTop_toBottomOf="@+id/rvCountryImage" />
+
+    <ImageView
+        android:id="@+id/rvCountryImage"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        android:contentDescription="@string/country_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

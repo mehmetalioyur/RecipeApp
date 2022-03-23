@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">RecipeApp</string>
+    <string name="recipe">Recipe</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="youtube">Youtube</string>
+    <string name="sample_measure">2 tbs</string>
+    <string name="sample_ingredient">Egg</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+    <string name="recipe_title">RECIPE</string>
+    <string name="ingredients_title">INGREDIENTS</string>
+    <string name="meals">Meals</string>
+    <string name="search">Search…</string>
+    <string name="saved_meals">Saved Meals</string>
+    <string name="save">save</string>
+    <string name="meals_title">Meals</string>
+    <string name="title_list_by_category">List By Categories</string>
+    <string name="something_went_wrong">Something went wrong…</string>
+    <string name="error_message">Something went wrong…</string>
+    <string name="noMealText">You haven\'t saved any recipe yet</string>
+    <string name="there_isn_t_this_meal_recipe_in_our_database">There isn\'t this meal recipe in our database :(</string>
+    <string name="find_a_random_meal_recipe">FIND A RANDOM MEAL RECIPE</string>
+    <string name="list_by_country_text">List By Countries</string>
+    <string name="let_s_have_a_look_to_the_meal_recipes">Let\'s have a look to the meal recipes</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="mealname">MealName</string>
+    <string name="meal_image">Meal Image</string>
+    <string name="category_image">Category Image</string>
+    <string name="country_image">Country Image</string>
+    <string name="ingredient_image">Ingredient Image</string>
+    <string name="search_menu">Search</string>
+    <string name="meal_title">Meal Title</string>
+    <string name="meal_nation">Meal Nation</string>
+    <string name="meal_category">Meal Category</string>
+
+</resources>

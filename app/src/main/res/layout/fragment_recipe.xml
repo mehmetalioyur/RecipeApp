@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/save"
+        android:focusable="true"
+        android:soundEffectsEnabled="true"
+        app:layout_anchor="@id/scrollView"
+        app:layout_anchorGravity="bottom|end|right"
+        app:srcCompat="@drawable/ic_save" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvMealTitle"
+                style="@style/title_style"
+                android:text="@string/meal_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mealImage"
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:layout_margin="8dp"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMealTitle"
+                tools:srcCompat="@tools:sample/avatars"
+                android:contentDescription="@string/meal_image" />
+
+
+            <TextView
+                android:id="@+id/tvMealCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text="@string/meal_nation"
+                android:textAlignment="center"
+                android:textColor="#090300"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mealImage" />
+
+            <TextView
+                android:id="@+id/tvMealCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text="@string/meal_category"
+                android:textAlignment="center"
+                android:textColor="#090300"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMealCountry"
+                />
+
+            <TextView
+                android:id="@+id/tvRecipeTitle"
+                style="@style/title_style"
+                android:text="@string/recipe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMealCategory"  />
+
+            <TextView
+                android:id="@+id/tvMealRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text="@string/recipe"
+                android:textColor="#090300"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRecipeTitle"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/recipeProgressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/scrollView"
+        app:layout_anchorGravity="center"
+        />
+
+    <TextView
+        android:id="@+id/recipeErrorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/akaya_telivigala"
+        android:text="@string/something_went_wrong"
+        app:layout_anchorGravity="center"
+        app:layout_anchor="@id/scrollView" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
