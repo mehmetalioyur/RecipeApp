@@ -113,7 +113,7 @@ class OverviewFragment : Fragment(R.layout.fragment_overview) {
             overviewRecyclerAdapter.setOnItemClickListener {
                 val action = OverviewFragmentDirections.actionOverviewFragmentToMealListFragment(
                     it,
-                    0
+                    CATEGORY_CHOICED
                 ) //enum
                 findNavController().navigate(action)
             }
@@ -129,7 +129,7 @@ class OverviewFragment : Fragment(R.layout.fragment_overview) {
 
             countriesRecyclerAdapter.setOnItemClickListener {
                 val action = OverviewFragmentDirections.actionOverviewFragmentToMealListFragment(
-                    it, 1
+                    it, COUNTRY_CHOICED
                 ) //enum
                 findNavController().navigate(action)
             }
@@ -141,4 +141,10 @@ class OverviewFragment : Fragment(R.layout.fragment_overview) {
         bottomAppBar.visibility = View.GONE
         _binding = null
     }
+companion object {
+    private const val CATEGORY_CHOICED = 0
+    private const val COUNTRY_CHOICED = 1
+}
+
+
 }
