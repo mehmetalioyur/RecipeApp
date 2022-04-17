@@ -49,7 +49,7 @@ class IngredientsViewModel @Inject constructor(
     }
 
 
-    fun isItemExist(item: String?, list: MutableList<String>) {
+    fun addItemToListIfExist(item: String?, list: MutableList<String>) {
         if (item.isNullOrEmpty()) {
             return
         } else {
