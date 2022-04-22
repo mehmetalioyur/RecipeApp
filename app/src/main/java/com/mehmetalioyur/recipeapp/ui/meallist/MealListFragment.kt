@@ -47,7 +47,7 @@ class MealListFragment : Fragment(R.layout.fragment_meal_list) {
                     it.data?.let { mealList ->
                         val meals = mealList.meals
                         ViewStatus().apply {
-                            binding.apply {
+                            with(binding) {
                                 showScreen(mealListRv)
                                 hideProgressBar(mealListProgressBar)
                                 hideErrorMessage(mealListErrorText)
@@ -58,7 +58,7 @@ class MealListFragment : Fragment(R.layout.fragment_meal_list) {
                 }
                 is Resource.Error -> {
                     ViewStatus().apply {
-                        binding.apply {
+                        with(binding) {
                             hideScreen(mealListRv)
                             hideProgressBar(mealListProgressBar)
                             showErrorMessage(mealListErrorText)
@@ -67,7 +67,7 @@ class MealListFragment : Fragment(R.layout.fragment_meal_list) {
                 }
                 is Resource.Loading -> {
                     ViewStatus().apply {
-                        binding.apply {
+                        with(binding) {
                             hideScreen(mealListRv)
                             showProgressBar(mealListProgressBar)
                             hideErrorMessage(mealListErrorText)
@@ -79,7 +79,7 @@ class MealListFragment : Fragment(R.layout.fragment_meal_list) {
     }
 
     private fun setupRV() {
-        binding.mealListRv.apply {
+        with(binding.mealListRv) {
             adapter = mealListRecyclerAdapter
             layoutManager = LinearLayoutManager(requireContext())
 

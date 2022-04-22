@@ -105,7 +105,7 @@ class OverviewFragment : Fragment(R.layout.fragment_overview) {
     }
 
     private fun setupRV() {
-        binding.overviewReyclerView.apply {
+        with(binding.overviewReyclerView) {
             adapter = overviewRecyclerAdapter
             layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
@@ -121,7 +121,7 @@ class OverviewFragment : Fragment(R.layout.fragment_overview) {
     }
 
     private fun setupCountryRV() {
-        binding.countryRecyclerView.apply {
+        with(binding.countryRecyclerView) {
             adapter = countriesRecyclerAdapter
             layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)

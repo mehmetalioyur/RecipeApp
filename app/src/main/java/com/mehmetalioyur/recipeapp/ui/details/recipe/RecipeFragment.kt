@@ -60,7 +60,7 @@ class RecipeFragment() : Fragment(R.layout.fragment_recipe) {
                         applyChangesToViews(this)
                     }
 
-                    binding.apply {
+                    with(binding) {
                         ViewStatus().apply {
                             showScreen(scrollView)
                             hideErrorMessage(recipeErrorText)
@@ -69,7 +69,7 @@ class RecipeFragment() : Fragment(R.layout.fragment_recipe) {
                     }
                 }
                 is Resource.Error -> {
-                    binding.apply {
+                    with(binding) {
                         ViewStatus().apply {
                             hideScreen(scrollView)
                             showErrorMessage(recipeErrorText)
@@ -80,7 +80,7 @@ class RecipeFragment() : Fragment(R.layout.fragment_recipe) {
                 }
 
                 is Resource.Loading -> {
-                    binding.apply {
+                    with(binding) {
                         ViewStatus().apply {
                             hideScreen(scrollView)
                             hideErrorMessage(recipeErrorText)

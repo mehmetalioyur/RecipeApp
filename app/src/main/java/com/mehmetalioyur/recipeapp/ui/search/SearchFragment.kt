@@ -92,7 +92,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                         val meals = mealModel.meals
                         if (meals.isNullOrEmpty()) {
                             ViewStatus().apply {
-                                binding.apply {
+                                with(binding) {
                                     hideScreen(searchRecyclerView)
                                     hideErrorMessage(searchErrorMessage)
                                     showMealExist(
@@ -104,7 +104,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                             }
                         } else {
                             ViewStatus().apply {
-                                binding.apply {
+                                with(binding) {
                                     showScreen(searchRecyclerView)
                                     hideErrorMessage(searchErrorMessage)
                                     hideProgressBar(searchProgressBar)
@@ -125,7 +125,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
                 is Resource.Error -> {
                     ViewStatus().apply {
-                        binding.apply {
+                        with(binding) {
                             hideScreen(searchRecyclerView)
                             showErrorMessage(searchErrorMessage)
                             hideProgressBar(searchProgressBar)
@@ -142,7 +142,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
                 is Resource.Loading -> {
                     ViewStatus().apply {
-                        binding.apply {
+                        with(binding) {
                             hideScreen(searchRecyclerView)
                             hideErrorMessage(searchErrorMessage)
                             showProgressBar(searchProgressBar)

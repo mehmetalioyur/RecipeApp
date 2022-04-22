@@ -95,7 +95,7 @@ class IngredientsFragment : Fragment(R.layout.fragment_ingredients) {
                     ingredientsRecyclerAdapter.ingredients = ingredientList
                     ingredientsRecyclerAdapter.measures = measureList
 
-                    binding.apply {
+                    with(binding) {
                         ViewStatus().apply {
                             showScreen(ingredientsRV)
                             hideErrorMessage(ingredientsErrorTV)
@@ -104,7 +104,7 @@ class IngredientsFragment : Fragment(R.layout.fragment_ingredients) {
                     }
                 }
                 is Resource.Error -> {
-                    binding.apply {
+                    with(binding) {
                         ViewStatus().apply {
                             hideScreen(ingredientsRV)
                             showErrorMessage(ingredientsErrorTV)
@@ -113,7 +113,7 @@ class IngredientsFragment : Fragment(R.layout.fragment_ingredients) {
                     }
                 }
                 is Resource.Loading -> {
-                    binding.apply {
+                    with(binding) {
                         ViewStatus().apply {
                             hideScreen(ingredientsRV)
                             hideErrorMessage(ingredientsErrorTV)
@@ -126,7 +126,7 @@ class IngredientsFragment : Fragment(R.layout.fragment_ingredients) {
     }
 
         private fun setupRv() {
-        binding.ingredientsRV.apply {
+        with(binding.ingredientsRV) {
             adapter = ingredientsRecyclerAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
