@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RecipeApp</string>
+    <string name="app_name">Delish</string>
     <string name="recipe">Recipe</string>
     <string name="ingredients">Ingredients</string>
     <string name="youtube">Youtube</string>
